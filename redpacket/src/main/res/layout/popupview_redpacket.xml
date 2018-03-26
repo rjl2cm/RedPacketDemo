@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000" >
+
+    <ImageView
+        android:id="@+id/print"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:adjustViewBounds="true"
+        android:maxHeight="160dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:src="@mipmap/rp_print" />
+
+    <ImageButton
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="60dp"
+        android:background="@null"
+        android:src="@mipmap/rp_cancel" />
+
+    <FrameLayout
+        android:id="@+id/flt_rp"
+        android:layout_width="match_parent"
+        android:layout_height="276dp"
+        android:layout_below="@+id/print"
+        android:adjustViewBounds="true" >
+
+        <LinearLayout
+            android:id="@+id/title_lyt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="15dp" >
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="送大礼    积分换图书"
+                android:textColor="#ff3333"
+                android:textSize="21sp" />
+
+            <TextView
+                android:id="@+id/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="送大礼,积分送不停"
+                android:textColor="#ff3333"
+                android:visibility="gone"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/rp_envelope_bg"
+            android:layout_width="230dp"
+            android:layout_height="160dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="7dp"
+            android:adjustViewBounds="true"
+            android:background="@mipmap/rp_envelope_bg" >
+        </View>
+
+        <LinearLayout
+            android:id="@+id/rp_letter"
+            android:layout_width="226dp"
+            android:layout_height="156dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_margin="2dp"
+            android:adjustViewBounds="true"
+            android:background="@mipmap/rp_letter_rectangle"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="恭喜您获得了"
+                android:textColor="#ff3333"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/credits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="10000"
+                android:textColor="#ff3333"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="积分"
+                android:textColor="#ff3333"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/rp_envelope"
+            android:layout_width="279.5dp"
+            android:layout_height="165dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginLeft="3dp"
+            android:adjustViewBounds="true"
+            android:background="@mipmap/rp_envelope" />
+
+        <ImageView
+            android:id="@+id/rp_seal"
+            android:layout_width="232dp"
+            android:layout_height="180dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="74dp"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/rp_seal" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/share_channel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:alpha="0"
+        android:visibility="gone"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:text="飞芒二重礼，分享成功即可获得200积分"
+            android:textColor="#ffff00"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:weightSum="4" >
+
+            <ImageView
+                android:id="@+id/share_weibo"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:src="@drawable/login_weibo_pressed_selector" />
+
+            <ImageView
+                android:id="@+id/share_qq"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:src="@drawable/login_qq_pressed_selector" />
+
+            <ImageView
+                android:id="@+id/share_weixin"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:src="@drawable/login_weixin_pressed_selector" />
+
+            <ImageView
+                android:id="@+id/share_friendcircle"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:src="@mipmap/fenxiang_friend" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
